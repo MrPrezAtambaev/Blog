@@ -2,7 +2,11 @@ import { useFetchBlog } from "@/services/fetchBlog";
 import { Tabs } from "@mantine/core";
 import BlogGridView from "./BlogGridView";
 import BlogListView from "./BlogListView";
-import { IconGridPattern, IconList } from "@tabler/icons-react";
+import {
+	IconAlignJustified,
+	IconLayoutGrid,
+	IconList,
+} from "@tabler/icons-react";
 
 const BlogsView = () => {
 	const [blogs] = useFetchBlog({
@@ -15,11 +19,8 @@ const BlogsView = () => {
 	return (
 		<Tabs defaultValue="grid">
 			<Tabs.List position="right">
-				<Tabs.Tab
-					value="grid"
-					icon={<IconGridPattern size="0.8rem" />}
-				></Tabs.Tab>
-				<Tabs.Tab value="list" icon={<IconList size="0.8rem" />}></Tabs.Tab>
+				<Tabs.Tab value="grid" icon={<IconLayoutGrid size="1rem" />}></Tabs.Tab>
+				<Tabs.Tab value="list" icon={<IconList size="1rem" />}></Tabs.Tab>
 			</Tabs.List>
 
 			<Tabs.Panel value="grid" pt="xs">

@@ -41,7 +41,10 @@ const BlogDetails = ({ data }: Props) => {
 						</Text>
 					</Group>
 					<TypographyStylesProvider w={250} h={100} mt={10} mb={0}>
-						<div dangerouslySetInnerHTML={{ __html: data.description ?? "" }} />
+						<div
+							style={{ wordWrap: "break-word" }}
+							dangerouslySetInnerHTML={{ __html: data.description ?? "" }}
+						/>
 					</TypographyStylesProvider>
 				</Card.Section>
 				<Group mt={0}>
