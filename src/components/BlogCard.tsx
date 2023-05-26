@@ -42,9 +42,9 @@ const BlogCard = ({ blog }: Props) => {
 							{blog.title}
 						</Text>
 					</Group>
-					{/* <TypographyStylesProvider w={250} h={100} mt={10} mb={0}>
+					<TypographyStylesProvider w={250} h={100} mt={10} mb={0}>
 						<div dangerouslySetInnerHTML={{ __html: blog.description ?? "" }} />
-					</TypographyStylesProvider> */}
+					</TypographyStylesProvider>
 				</Card.Section>
 				<Group mt={0}>
 					<ActionIcon

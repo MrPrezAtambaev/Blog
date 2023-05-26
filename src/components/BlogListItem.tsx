@@ -43,6 +43,9 @@ const BlogListItem = ({ blog }: Props) => {
 							{blog.title}
 						</Text>
 					</Group>
+					<TypographyStylesProvider w={250} h={100} mt={10} mb={0}>
+						<div dangerouslySetInnerHTML={{ __html: blog.description ?? "" }} />
+					</TypographyStylesProvider>
 					<Group mt={0}>
 						<ActionIcon
 							variant="light"

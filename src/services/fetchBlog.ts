@@ -2,26 +2,24 @@ import { useQuery } from "@tanstack/react-query";
 import { Blog } from "@/utils/types/Blog";
 import { baseAxios } from "@/utils/baseAxios";
 
-type FiltersBlog = {
-	_sort?: keyof Blog;
-	_order?: "asc" | "desc";
-};
+// type FiltersBlog = {
+// 	_sort?: keyof Blog;
+// 	_order?: "asc" | "desc";
+// };
 
-type FetchBlogArg = {
-	filters?: FiltersBlog;
-};
+// type FetchBlogArg = {
+// 	filters?: FiltersBlog;
+// };
 
-const fetchBlog = async (arg: FetchBlogArg) => {
-	const { data } = await baseAxios.get<Blog[]>("/blog", {
-		params: arg.filters,
-	});
+const fetchBlog = async () => {
+	const { data } = await baseAxios.get<Blog[]>("/blog");
 
 	return data;
 };
 
-export const useFetchBlog = (arg: FetchBlogArg = {}) => {
+export const useFetchBlog = () => {
 	const query = useQuery({
-		queryFn: () => fetchBlog(arg),
+		queryFn: () => fetchBlog(),
 		queryKey: ["blog"],
 		initialData: [],
 	});

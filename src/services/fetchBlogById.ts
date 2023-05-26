@@ -8,7 +8,7 @@ export type FetchBlogByIdArg = {
 };
 
 const fetchBlogById = async (arg: FetchBlogByIdArg) => {
-	const { data } = await baseAxios.get<Blog>(`/blog/${arg.id}`);
+	const { data } = await baseAxios.get<Blog>(`/blog/${arg.id}/`);
 	return data;
 };
 

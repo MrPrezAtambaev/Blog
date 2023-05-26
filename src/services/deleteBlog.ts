@@ -7,7 +7,7 @@ type DeleteBlogArg = {
 
 const deleteBlog = async (arg: DeleteBlogArg) => {
 	const { id } = arg;
-	await baseAxios.delete(`/blog/${id}`);
+	await baseAxios.delete(`/blog/${id}/`);
 };
 
 export const useDeleteBlog = () => {

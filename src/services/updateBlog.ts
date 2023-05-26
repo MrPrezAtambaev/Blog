@@ -8,7 +8,7 @@ type UpdateBlogArg = {
 };
 
 const updateBlog = async (arg: UpdateBlogArg) => {
-	const { data } = await baseAxios.patch(`/blog/${arg.id}`, arg.data);
+	const { data } = await baseAxios.put(`/blog/${arg.id}/`, arg.data);
 	return data;
 };
 
