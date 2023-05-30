@@ -9,12 +9,11 @@ import {
 } from "@tabler/icons-react";
 
 const BlogsView = () => {
-	const [blogs] = useFetchBlog({
-		filters: {
-			_sort: "id",
-			_order: "desc",
-		},
-	});
+	const [blogs] = useFetchBlog();
+	// filters: {
+	// 	_sort: "id",
+	// 	_order: "desc",
+	// },);
 
 	return (
 		<Tabs defaultValue="grid">
